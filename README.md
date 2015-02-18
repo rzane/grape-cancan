@@ -22,7 +22,7 @@ __NOTE:__ The [cancan](https://github.com/ryanb/cancan) gem by Ryan Bates is no 
 
 ## Usage
 
-This gem adds the __can?__, __cannot?__, and __authorize!__ helper methods to all Grape API endpoints. This gem expects you to have a __current_user__ helper.
+This gem adds the __current_ability__, __can?__, __cannot?__, and __authorize!__ helper methods to all Grape API endpoints. This gem expects you to have a __current_user__ helper.
 
 ```ruby
 class Users < Grape::API
