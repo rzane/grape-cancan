@@ -1,0 +1,20 @@
+language: ruby
+
+rvm:
+  - 2.2.4
+
+before_install: gem install bundler -v 1.11.2
+
+env:
+  matrix:
+    - GRAPE=HEAD
+    - GRAPE=0.15.0
+    - GRAPE=0.14.0
+    - GRAPE=0.13.0
+    - GRAPE=0.12.0
+    - GRAPE=0.11.0
+    - GRAPE=0.10.0
+    - GRAPE=0.9.0
+    - GRAPE=0.8.0
+    - GRAPE=0.7.0
+    - GRAPE=0.6.0
