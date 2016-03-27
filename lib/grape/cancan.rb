@@ -23,8 +23,8 @@ module Grape
         authorize!(*opts[:authorize]) if opts.key?(:authorize)
       end
     end
-
-    Grape::API.extend Grape::CanCan::API
-    Grape::Endpoint.send :include, Grape::CanCan::Endpoint
   end
 end
+
+Grape::API.extend Grape::CanCan::API
+Grape::Endpoint.send :include, Grape::CanCan::Endpoint
