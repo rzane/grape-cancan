@@ -1,5 +1,7 @@
 require 'grape'
 require 'grape/cancan/version'
+require 'active_support/inflector'
+require 'active_support/core_ext/module/delegation'
 
 module Grape
   module CanCan
