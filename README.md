@@ -1,4 +1,4 @@
-# Grape::CanCan
+# Grape::CanCan [![Build Status](https://travis-ci.org/rzane/grape-cancan.svg?branch=master)](https://travis-ci.org/rzane/grape-cancan)
 
 Use CanCan to authorize your Grape endpoints.
 
