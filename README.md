@@ -71,6 +71,25 @@ class Users < Grape::API
 end
 ```
 
+#### Handle Unauthorized Access
+
+If the user authorization fails, a `CanCan::AccessDenied` exception will be raised. You should catch this and respond appropriately. For example, you could [redirect the user to the root page](https://github.com/CanCanCommunity/cancancan#3-handle-unauthorized-access), or return a 403 Forbidden as in this example (the `error!` is a [convenience provided by Grape](https://github.com/ruby-grape/grape#raising-exceptions)):
+
+```ruby
+class Users < Grape::API
+  resource :users
+  rescue_from ::CanCan::AccessDenied do
+    error!('403 Forbidden', 403)
+  end
+
+  get '/:id' do
+    @user = User.find(params[:id])
+    authorize! :read, @user
+    @user
+  end
+end
+```
+
 ## Contributing
 
 1. Fork it ( https://github.com/rzane/grape-cancan/fork )
