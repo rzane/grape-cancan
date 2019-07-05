@@ -28,5 +28,5 @@ module Grape
   end
 end
 
-Grape::API.extend Grape::CanCan::API
+Grape::API::Instance.extend Grape::CanCan::API
 Grape::Endpoint.send :include, Grape::CanCan::Endpoint
